@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/tailwind.css">
+
+    <style>
+        @keyframes slideImage{
+            0%{left: 0px;}
+            10%{left: 0px;}
+            20%{left: 1200px;}
+            30%{left: 1200px;}
+            40%{left: 2400px;}
+            50%{left: 2400px;}
+            60%{left: 1200px;}
+            70%{left: 1200px;}
+            80%{left:  0px;}
+            90%{left:  0px;}
+            100%{left: 0px;}
+        }
+        .box{
+
+            animation: slideImage  infinite;
+            animation-duration: 15s;
+            animation-direction: alternate;
+            animation-play-state: running;
+        }
+        .img-container{
+            position: relative;
+            height: 800px;
+            width: 1200px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <main class="mainbox overflow-hidden  h-[800px] w-full ">
+
+        <div class="box relative   w-full h-[800px] ">
+            <div class="img-container"><img src="../Imgae/angkor-image.jpg" width="100%" class="absolute top-0 left-0 h-full object-contain " alt=""></div> 
+            <div class="img-container"><img src="../Imgae/bg-seim reap.jpg" width="100%" class="absolute top-0 left-0 h-full object-contain " alt=""></div> 
+            <div class="img-container"><img src="../Imgae/logo-seim reap.webp" width="100%" class="absolute top-0 left-0 h-full object-contain " alt=""></div> 
+            <div class="img-container"><img src="../Imgae/tree-temple.jpeg" width="100%" class="absolute top-0 left-0 h-full object-contain " alt=""></div> 
+        </div>
+
+    </main>
+</body>
+</html>

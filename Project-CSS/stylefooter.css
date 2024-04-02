@@ -1,0 +1,116 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.container
+{
+    max-width: 1170px;
+    margin: auto;
+}
+.row
+{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+ul
+{
+    list-style: none;
+}
+.footer
+{
+
+    padding: 50px 0;
+}
+.footer-col
+{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4
+{
+    color: aliceblue;
+    font-size: 25px;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+}
+.footer-col h4:hover
+{
+    color: orange;
+}
+.footer-col h4::after
+{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -10px;
+    height: 5px;
+    width: 20%;
+    border-radius: 20px;
+    background-color: orange;
+}
+.footer-col ul li:not(:last-child)
+{
+    margin-bottom: 20px;
+}
+.footer-col ul li a
+{
+    color: #bbbbbb;
+    font-size: 15px;
+    text-transform: capitalize;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover
+{
+    color: aliceblue;
+    padding-left: 10px;
+}
+.footer-col .socail-links a
+{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size:20px;
+    color: #bbbbbb;
+    background-color: rgba(255, 255, 255, .2);
+    text-align: center;
+    line-height: 40px;
+    margin: 0 10px 10px 0;
+    border-radius: 50%;
+}
+.footer-col .socail-links a:hover
+{
+    background-color: orange;
+    transform: scale(1.2);
+    transition: .4s;
+}
+@media(max-width:620px)
+{
+    .footer-col
+    {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+    .footer-col h4
+    {
+        font-size: 20px;
+    }
+}
+@media(max-width:450px)
+{
+    .footer-col
+    {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+    .footer-col h4
+    {
+        font-size: 15px;
+    }
+}

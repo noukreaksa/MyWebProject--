@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../tailwindcss.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+/* Style Option At HomePage */
+        #FormTour{
+            display: flex;
+        }
+        #FormTravel{
+            display: none;
+
+        }
+        #FormHotel{
+            display: none;
+        }
+        #FormFlight{
+            display: none;
+        }  
+        .FormTour{
+            z-index: 1;
+            background: linear-gradient(to right , rgb(234, 98, 8),rgb(70, 30, 3),rgb(1,1,1,1));
+        }
+        .FormTravel{
+            z-index: 2;
+            background: linear-gradient(to right , rgb(1,1,1,1),rgb(70, 30, 3),rgb(234, 98, 8));
+        }
+        .FormHotel{
+            z-index: 3;
+            background: linear-gradient(to right ,rgb(70, 30, 3),rgb(1,1,1,1),rgb(234, 98, 8));
+        }
+        .FormFlight{
+            z-index: 3;
+            background: linear-gradient(to right ,rgb(70, 30, 3),rgb(234, 98, 8),rgb(1,1,1,1));
+        }
+        .boxItem.active  {
+            background: rgb(249 ,115, 22);  
+        }
+        .boxItem.active a  {
+            color: white;
+        }
+/* Style Option At HomePage END*/
+
+        </style>
+</head>
+<body>
+    <section> 
+        <figure class="otherService w-full absolute">
+            <div class="containerForm h-[180px] w-full flex flex-col  border-orange-500">
+                <container class="containerItem  w-full flex justify-center ">
+
+                    <div class="boxOption w-[90%] md:w-[60%] h-20 bg-slate-200  flex justify-evenly  rounded-tl-full rounded-tr-full overflow-hidden">         
+                      
+                        <div id="optionTour" class="boxItem flex justify-center items-center w-[25%] hover:bg-orange-500 group cursor-pointer duration-500 active">
+                            <a href="#" class="IconItem flex items-center text-orange-500 group-hover:text-white gap-2 "><i class="fa-solid fa-map"></i><span class="text-black group-hover:text-white md:text-xl font-mono font-semibold uppercase group-hover:scale-105 duration-300">Tour</span></a>
+                        </div>
+
+                        <div id="optionTravel" class="boxItem flex justify-center items-center w-[25%]  hover:bg-orange-500 group cursor-pointer duration-500 ">
+                            <a href="#" class="IconItem flex items-center text-orange-500 group-hover:text-white gap-2 "><i class="fa-solid fa-van-shuttle"></i><span class="text-black group-hover:text-white md:text-xl font-mono font-semibold uppercase group-hover:scale-105 duration-300">Car Rentals</span></a>
+                        </div>
+
+                        <div id="optionHotel" class="boxItem flex justify-center items-center w-[25%] hover:bg-orange-500 group cursor-pointer duration-500 ">
+                            <a href="#" class="IconItem flex items-center text-orange-500 group-hover:text-white gap-2 "><i class="fa-solid fa-hotel"></i><span class="text-black group-hover:text-white md:text-xl font-mono font-semibold uppercase group-hover:scale-105 duration-300">Hotel</span></a>
+                        </div>
+
+                        <div id="optionFlight" class="boxItem flex justify-center items-center w-[25%] hover:bg-orange-500 group cursor-pointer duration-500 ">
+                            <a href="#" class="IconItem flex items-center text-orange-500 group-hover:text-white gap-2 "><i class="fa-solid fa-plane"></i><span class="text-black group-hover:text-white md:text-xl font-mono font-semibold uppercase group-hover:scale-105 duration-300">Flights</span></a>
+                        </div>
+                    </div>
+                </container>
+
+                <div class="boxForm w-full  h-[100%]   relative ">
+
+
+                    <div id="FormTour" class="FormTour w-full   h-full   flex flex-col justify-center items-center absolute top-0 ">
+                        <form action="" class="flex  h-[50%] gap-3">
+                            <div class=" flex flex-col justify-evenly h-[100%] ">
+                                <label for="destination" class="uppercase text-white ">destination</label>
+                            <select name="" id="" class="cursor-pointer uppercase text-sm text-gray-500 w-52  md:w-[300px] pt-1 md:py-0.5 px-2 rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                                <option value="destination" >destination...</option>
+                                <option value="Phnom Penh Capital" >Phnom Penh Capital</option>
+                                <option value="kandal                   Province" >kandal                   Province</option>
+                                <option value="Kompot                   Province" >Kompot                   Province</option>
+                                <option value="Koh kong                 Province" >Koh kong                 Province</option>
+                                <option value="Kompong Chhnang Meanchey Province" >Kompong Chhnang          Province</option>
+                                <option value="Kompong Cham             Province" >Kompong Cham             Province</option>
+                                <option value="Kompong Thom             Province" >Kompong Thom             Province</option>
+                                <option value="Kompong speu             Province" >Kompong speu             Province</option>
+                                <option value="Preah Sihanouk           Province" >Preah Sihanouk           Province</option>
+                                <option value="Prey Veng                Province" >Prey Veng                Province</option>
+                                <option value="Pursat                   Province" >Pursat                   Province</option>
+                                <option value="Preah Vihear             Province" >Preah Vihear             Province</option>
+                                <option value="Seim Reap                Province" >Seim Reap                Province</option>
+                                <option value="Battambong               Province" >Battambong               Province</option>
+                                <option value="Banteay Meanchey         Province" >Banteay Meanchey         Province</option>
+                                <option value="Oddar Meanchey           Province" >Oddar Meanchey           Province</option>
+                                <option value="Pailin                   Province" >Pailin                   Province</option>
+                                <option value="Takeo                    Province" >Takeo                    Province</option>
+                                <option value="Svay Rieng               Province" >Svay Rieng               Province</option>
+                                <option value="Tboung Kimom             Province" >Tboung Kimom             Province</option>
+                                <option value="Kratie                   Province" >Kratie                   Province</option>
+                                <option value="Mondulkiri               Province" >Mondulkiri               Province</option>
+                                <option value="Ratankiri                Province" >Ratankiri                Province</option>
+                                <option value="Stung Treng              Province" >Stung Treng              Province</option>
+                            </select>
+                        </div>
+                        <div class=" flex flex-col justify-between h-[100%]  ">
+                            <label for="destination" class="uppercase text-white ">Start Travel</label>                    
+    
+                            <input type="date" class="w-32 md:w-full py-3 px-2 text-sm md:text-base text-gray-500  rounded-xl cursor-pointer border-2 hover:border-orange-500 outline-orange-500" >
+                        </div>
+                        
+                        <div class=" flex flex-col justify-evenly h-[100%] ">
+                            <label for="destination" class="uppercase text-white ">Adults</label>                    
+                            <select name="" id="" class="cursor-pointer uppercase text-gray-500 px-1 md:px-5  rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+    
+                        <div class=" flex flex-col justify-evenly h-[100%] ">
+                            <label for="destination" class="uppercase text-white ">Childs</label>                    
+                            <select name="" id="" class=" cursor-pointer uppercase text-gray-500 px-1 md:px-5 rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+    
+                        
+                            <button class="bg-green-700 hover:bg-green-500 px-1 md:px-10 rounded-2xl translate-y-[15%] text-white text-xl font-mono font-semibold border-2 border-x-white hover:scale-105 duration-300">
+                                Search...</button>
+                        
+                        </form>
+                    </div>
+
+                <div id="FormTravel" class="FormTravel w-full   h-full   flex flex-col justify-center items-center  absolute top-0">
+                    <form action="" class="flex  h-[50%] gap-3">
+                        <div class=" flex flex-col justify-evenly h-[100%] ">
+                            <label for="destination" class="uppercase text-white ">destination</label>
+                        <select name="" id="" class="cursor-pointer uppercase text-sm text-gray-500 w-52 md:w-[300px] pt-1 md:py-0.5 px-2 rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="destination" >destination...</option>
+                            <option value="Phnom Penh Capital" >Phnom Penh Capital</option>
+                            <option value="kandal                   Province" >kandal                   Province</option>
+                            <option value="Kompot                   Province" >Kompot                   Province</option>
+                            <option value="Koh kong                 Province" >Koh kong                 Province</option>
+                            <option value="Kompong Chhnang Meanchey Province" >Kompong Chhnang          Province</option>
+                            <option value="Kompong Cham             Province" >Kompong Cham             Province</option>
+                            <option value="Kompong Thom             Province" >Kompong Thom             Province</option>
+                            <option value="Kompong speu             Province" >Kompong speu             Province</option>
+                            <option value="Preah Sihanouk           Province" >Preah Sihanouk           Province</option>
+                            <option value="Prey Veng                Province" >Prey Veng                Province</option>
+                            <option value="Pursat                   Province" >Pursat                   Province</option>
+                            <option value="Preah Vihear             Province" >Preah Vihear             Province</option>
+                            <option value="Seim Reap                Province" >Seim Reap                Province</option>
+                            <option value="Battambong               Province" >Battambong               Province</option>
+                            <option value="Banteay Meanchey         Province" >Banteay Meanchey         Province</option>
+                            <option value="Oddar Meanchey           Province" >Oddar Meanchey           Province</option>
+                            <option value="Pailin                   Province" >Pailin                   Province</option>
+                            <option value="Takeo                    Province" >Takeo                    Province</option>
+                            <option value="Svay Rieng               Province" >Svay Rieng               Province</option>
+                            <option value="Tboung Kimom             Province" >Tboung Kimom             Province</option>
+                            <option value="Kratie                   Province" >Kratie                   Province</option>
+                            <option value="Mondulkiri               Province" >Mondulkiri               Province</option>
+                            <option value="Ratankiri                Province" >Ratankiri                Province</option>
+                            <option value="Stung Treng              Province" >Stung Treng              Province</option>
+                        </select>
+                    </div>
+                    <div class=" flex flex-col justify-between h-[100%]  ">
+                        <label for="destination" class="uppercase text-white ">Start Travel</label>                    
+
+                        <input type="date" class="w-32 md:w-full py-3 px-2 text-sm md:text-base text-gray-500  rounded-xl cursor-pointer border-2 hover:border-orange-500 outline-orange-500" >
+                    </div>
+                    
+                    <div class=" flex flex-col justify-evenly h-[100%] ">
+                        <label for="destination" class="uppercase text-white ">Adults</label>                    
+                        <select name="" id="" class="cursor-pointer uppercase text-gray-500 px-1 md:px-5  rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+                    <div class=" flex flex-col justify-evenly h-[100%] ">
+                        <label for="destination" class="uppercase text-white ">Childs</label>                    
+                        <select name="" id="" class=" cursor-pointer uppercase text-gray-500 px-1 md:px-5 rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+                    
+                        <button class="bg-green-700 hover:bg-green-500 px-1 md:px-10 rounded-2xl translate-y-[15%] text-white text-xl font-mono font-semibold border-2 border-x-white hover:scale-105 duration-300">
+                            Search...</button>
+                    
+                    </form>
+                </div>
+
+                <div id="FormHotel" class="FormHotel w-full   h-full   flex flex-col justify-center items-center  absolute top-0">
+                    <form action="" class="flex  h-[50%] gap-3">
+                        <div class=" flex flex-col justify-evenly h-[100%] ">
+                            <label for="destination" class="uppercase text-white ">destination</label>
+                        <select name="" id="" class="cursor-pointer uppercase text-sm text-gray-500 w-36 md:w-[300px] pt-1 md:py-0.5 px-2 rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="destination" >destination...</option>
+                            <option value="Phnom Penh Capital" >Phnom Penh Capital</option>
+                            <option value="kandal                   Province" >kandal                   Province</option>
+                            <option value="Kompot                   Province" >Kompot                   Province</option>
+                            <option value="Koh kong                 Province" >Koh kong                 Province</option>
+                            <option value="Kompong Chhnang Meanchey Province" >Kompong Chhnang          Province</option>
+                            <option value="Kompong Cham             Province" >Kompong Cham             Province</option>
+                            <option value="Kompong Thom             Province" >Kompong Thom             Province</option>
+                            <option value="Kompong speu             Province" >Kompong speu             Province</option>
+                            <option value="Preah Sihanouk           Province" >Preah Sihanouk           Province</option>
+                            <option value="Prey Veng                Province" >Prey Veng                Province</option>
+                            <option value="Pursat                   Province" >Pursat                   Province</option>
+                            <option value="Preah Vihear             Province" >Preah Vihear             Province</option>
+                            <option value="Seim Reap                Province" >Seim Reap                Province</option>
+                            <option value="Battambong               Province" >Battambong               Province</option>
+                            <option value="Banteay Meanchey         Province" >Banteay Meanchey         Province</option>
+                            <option value="Oddar Meanchey           Province" >Oddar Meanchey           Province</option>
+                            <option value="Pailin                   Province" >Pailin                   Province</option>
+                            <option value="Takeo                    Province" >Takeo                    Province</option>
+                            <option value="Svay Rieng               Province" >Svay Rieng               Province</option>
+                            <option value="Tboung Kimom             Province" >Tboung Kimom             Province</option>
+                            <option value="Kratie                   Province" >Kratie                   Province</option>
+                            <option value="Mondulkiri               Province" >Mondulkiri               Province</option>
+                            <option value="Ratankiri                Province" >Ratankiri                Province</option>
+                            <option value="Stung Treng              Province" >Stung Treng              Province</option>
+                        </select>
+                    </div>
+                    <div class=" flex flex-col justify-between h-[100%]  w-[100%] ">
+                        <label for="destination" class="uppercase text-white ">Check In Date</label>                    
+
+                        <input type="date" class="w-32 md:w-[100%] py-3 px-2 text-sm md:text-base text-gray-500  rounded-xl cursor-pointer border-2 hover:border-orange-500 outline-orange-500" >
+                    </div>
+
+                    <div class=" flex flex-col justify-between h-[100%]  w-[100%]  ">
+                        <label for="destination" class="uppercase text-white ">Check Out</label>                    
+
+                        <input type="date" class="w-32 md:w-[100%] py-3 px-2 text-sm md:text-base text-gray-500  rounded-xl cursor-pointer border-2 hover:border-orange-500 outline-orange-500" >
+                    </div>
+                    
+                    <div class=" flex flex-col justify-evenly h-[100%] ">
+                        <label for="destination" class="uppercase text-white ">Adults</label>                    
+                        <select name="" id="" class="cursor-pointer uppercase text-gray-500 px-1 md:px-5  rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+
+                    
+                        <button class="bg-green-700 hover:bg-green-500 px-1 md:px-10 rounded-2xl translate-y-[15%] text-white text-xl font-mono font-semibold border-2 border-x-white hover:scale-105 duration-300">
+                            Search...</button>
+                    
+                    </form>
+                </div>
+
+
+                <div id="FormFlight" class="FormFlight w-full   h-full   flex flex-col justify-center items-center  absolute top-0">
+                    <form action="" class="flex  h-[50%] gap-3">
+                        <div class=" flex flex-col justify-evenly h-[100%] ">
+                            <label for="destination" class="uppercase text-white ">destination</label>
+                        <select name="" id="" class="cursor-pointer uppercase text-sm text-gray-500 w-36 md:w-[300px] pt-1 md:py-0.5 px-2 rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="destination" >destination...</option>
+                            <option value="Phnom Penh Capital" >Phnom Penh Capital</option>
+                            <option value="Phnom Penh Air Plan">Phnom Penh Air Plan</option>
+                            <option value="Seim Reap Air Plan ">Seim Reap Air Plan </option>
+                            <option value="Battambong Air Plan">Battambong Air Plan</option>
+                            <option value="Sihanouk Air Plan  ">Sihanouk Air Plan  </option>
+                        </select>
+                    </div>
+                    <div class=" flex flex-col justify-between h-[100%]  w-[100%] ">
+                        <label for="destination" class="uppercase text-white ">Check In Date</label>                    
+
+                        <input type="date" class="w-32 md:w-[100%] py-3 px-2 text-sm md:text-base text-gray-500  rounded-xl cursor-pointer border-2 hover:border-orange-500 outline-orange-500" >
+                    </div>
+
+                    <div class=" flex flex-col justify-between h-[100%]  w-[100%]  ">
+                        <label for="destination" class="uppercase text-white ">Check Out</label>                    
+
+                        <input type="date" class="w-32 md:w-[100%] py-3 px-2 text-sm md:text-base text-gray-500  rounded-xl cursor-pointer border-2 hover:border-orange-500 outline-orange-500" >
+                    </div>
+                    
+                    <div class=" flex flex-col justify-evenly h-[100%] ">
+                        <label for="destination" class="uppercase text-white ">Adults</label>                    
+                        <select name="" id="" class="cursor-pointer uppercase text-gray-500 px-1 md:px-5  rounded-xl border-2 hover:border-orange-500 outline-orange-500">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+
+                    
+                        <button class="bg-green-700 hover:bg-green-500 px-1 md:px-10 rounded-2xl translate-y-[15%] text-white text-xl font-mono font-semibold border-2 border-x-white hover:scale-105 duration-300">
+                            Search...</button>
+                    
+                    </form>
+                </div>
+
+
+            </div>
+            </div>
+        </figure>
+    </section>
+</body>
+<script src="../Project-JS/project-js.js"></script>
+
+</html>

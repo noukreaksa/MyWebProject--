@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background: gray;
+}
+root{
+    --orange : rgb(255, 128, 0);
+}
+.bar{
+    background: rgba(255, 255, 255, 0.069);
+    
+}
+.bgHomepage {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: height(100vh-60px);
+
+}
+.bgHomepage .bg-slide{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+
+}
+.bg-slide{
+    clip-path: circle(0% at 0 50%);
+}
+.bg-slide.active{
+    position: absolute;
+    top: auto;
+    clip-path: circle(150% at 0 50%);
+   
+}
+.navbar  a:before{
+
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: 0.2s ease-in;
+}
+.navbar a:hover::before{
+width: 100%;
+}
+.listCategory ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: rgb(255, 128, 0);
+    bottom: -2%;
+    left: 0;
+    transition: 0.2s ease-in;
+}
+.listCategory ul li a:hover:before{
+width: 100%;
+}
+
+
+
+
+.changeContent:after{
+    content: "";
+    animation: changetext 10s infinite 1s ease-in-out;
+    
+}
+.btn-slider .btn-slide.active{
+    background-color: aliceblue;
+}
+.cardContentHomepage{
+    bottom: 40px;
+    right: 40px;
+    animation: slideContent 1s ease-in-out 1 0.2s normal both;
+}
+.boxshawdown:hover img{
+    transform: scale(1.2);
+}
+.boxshawdown:hover .txtProvinve{
+    left: 0%;
+    transition: calc(1s) ;
+}
+.boxshawdown:hover .viewDetail{
+    right: 10px;
+    z-index: 999;
+    transition: all 1s;
+    
+}
+.shawdowncard:hover .nameProvince{
+    left: 10px;
+    z-index: 888;
+    transition: all 0.5s;
+}
+@keyframes changetext{  
+    0%{content:"Temple";}
+    20%{content:"Beach";}
+    40%{content:"Advanture";}
+    60%{content:"Camping";}
+    80%{content:"Mountain";}
+    100%{content:"Waterfall";}
+}
+@keyframes slideContent{
+    from{
+        transform: translateX(-750px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+/* Style Option At HomePage */
+#FormTour{
+    display: flex;
+}
+#FormTravel{
+    display: none;
+
+}
+#FormHotel{
+    display: none;
+}
+#FormFlight{
+    display: none;
+}  
+.FormTour{
+    z-index: 1;
+    background: linear-gradient(to right , rgb(234, 98, 8),rgb(70, 30, 3),rgb(1,1,1,1));
+}
+.FormTravel{
+    z-index: 2;
+    background: linear-gradient(to right , rgb(1,1,1,1),rgb(70, 30, 3),rgb(234, 98, 8));
+}
+.FormHotel{
+    z-index: 3;
+    background: linear-gradient(to right ,rgb(70, 30, 3),rgb(1,1,1,1),rgb(234, 98, 8));
+}
+.FormFlight{
+    z-index: 3;
+    background: linear-gradient(to right ,rgb(70, 30, 3),rgb(234, 98, 8),rgb(1,1,1,1));
+}
+.boxItem.active  {
+    background: rgb(249 ,115, 22);  
+}
+.boxItem.active h2  {
+    color: white;
+}
+/* Style Option At HomePage END*/
