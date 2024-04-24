@@ -42,27 +42,26 @@
                             </div>
 
                             <div class="boxMenu w-full h-full flex flex-col justify-start relative py-5  bg-orange-600 gap-2">
-                            <div id="MenuItem1" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
+                            <div id="MenuItem1" data-drop="0" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
                                 <nav class=" menubar w-full h-full text-white font-semibold uppercase cursor-pointer hover:scale-95 duration-500 bg-orange-500 shadow-2xl shadow-black flex flex-col items-center ">
                                 <div class=" w-full  flex justify-between items-center px-2 ">
-                                    <h2>Menu</h2>
-                                    <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold relative  "><div class="drop" id="drop"><i class="dropDown fa-solid fa-caret-down" ></i></div></div>             
+                                    <h2>History Login</h2>
+                                    <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold relative  "><div class="drop1" id="drop1"><i class="dropDown fa-solid fa-caret-down" ></i></div></div>             
                                 </div>
 
-                                <ul id="sub-menu1" class="sub-menu hidden w-full  flex-col    bg-slate-500 ">
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mb-1"><a href="">History Admin</a></li>
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mt-1"><a href="">History Customer</a></li>
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mb-1"><a href="">History Admin</a></li>
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mt-1"><a href="">History Customer</a></li>
+                                <ul id="sub-menu1" class="sub-menu hidden w-full  flex-col    bg-slate-800 ">
+                                    <li id="HistoryAdmin"    class="hover:bg-slate-500  duration-300 px-4 mb-1 active" ><a href="#">History Admin</a></li>
+                                    <li id="HistoryCustomer" class="hover:bg-slate-500  duration-300 px-4 mt-1"        ><a href="#">History Customer</a></li>
+
                                 </ul>
                                 </nav>
                             </div>
 
-                            <div id="MenuItem2" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
+                            <div id="MenuItem2" data-drop="0" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
                                 <nav class=" menubar w-full h-full text-white font-semibold uppercase cursor-pointer hover:scale-95 duration-500 bg-orange-500 shadow-2xl shadow-black flex flex-col items-center ">
                                 <div class=" w-full  flex justify-between items-center px-2 ">
                                     <h2>Menu</h2>
-                                    <div class="iconDropBar text-3xl text-white font-semibold"><i class="fa-solid fa-caret-down"></i></div>       
+                                    <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold relative  "><div class="drop2" id="drop2"><i class="dropDown fa-solid fa-caret-down" ></i></div></div>             
                                 </div>
 
                                 <ul id="sub-menu2" class="sub-menu hidden w-full  flex-col    bg-slate-800 ">
@@ -72,11 +71,11 @@
                                 </nav>
                             </div>
 
-                            <div id="MenuItem3" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
+                            <div id="MenuItem3" data-drop="0"  class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
                                 <nav class=" menubar w-full h-full text-white font-semibold uppercase cursor-pointer hover:scale-95 duration-500 bg-orange-500 shadow-2xl shadow-black flex flex-col items-center ">
                                 <div class=" w-full  flex justify-between items-center px-2 ">
                                     <h2>Menu</h2>
-                                    <div class="iconDropBar text-3xl text-white font-semibold"><i class="fa-solid fa-caret-down"></i></div>       
+                                    <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold relative  "><div class="drop3" id="drop3"><i class="dropDown fa-solid fa-caret-down" ></i></div></div>             
                                 </div>
 
                                 <ul id="sub-menu3" class="sub-menu hidden w-full  flex-col    bg-slate-800 ">
@@ -86,11 +85,11 @@
                                 </nav>
                             </div>
 
-                            <div id="MenuItem4" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
+                            <div id="MenuItem4" data-drop="0"  class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
                                 <nav class=" menubar w-full h-full text-white font-semibold uppercase cursor-pointer hover:scale-95 duration-500 bg-orange-500 shadow-2xl shadow-black flex flex-col items-center ">
                                 <div class=" w-full  flex justify-between items-center px-2 ">
                                     <h2>Menu</h2>
-                                    <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold"><i class="fa-solid fa-caret-down"></i></div>       
+                                    <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold relative  "><div class="drop4" id="drop4"><i class="dropDown fa-solid fa-caret-down" ></i></div></div>             
                                 </div>
 
                                 <ul id="sub-menu4" class="sub-menu hidden w-full  flex-col    bg-slate-800 ">
@@ -114,10 +113,13 @@
 
                                 <div class=" col-span-12 row-span-2 bg-gray-300 shadow-2xl shadow-black mt-5">
                                     <div class="w-full h-full flex justify-center items-center">
-                                        <h2 class="font-semibold font-mono text-3xl text-orange-500">Admin-DashBoard</h2>
+                                        <h2 id="titleContainerDetail" class="font-semibold font-mono text-3xl text-orange-500">Admin-DashBoard</h2>
                                     </div>
                                 </div>
-                                <div class="containerShowDetail col-span-12 row-span-8 bg-gray-300 shadow-2xl shadow-black ">Helo</div>
+                                <div class="containerShowDetail col-span-12 row-span-8 bg-blue-300 shadow-2xl shadow-black relative">
+                                    <div class="HistoryAdmin    w-full h-full bg-black      absolute top-0 left-0 hidden"></div>
+                                    <div class="HistoryCustomer w-full h-full bg-orange-500 absolute top-0 left-0 hidden"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -131,20 +133,86 @@
     var iconUpBar  = `<i  id="dropUp" class="dropUp fa-solid fa-caret-up"></i>`;
     $(document).ready(function(){
         $('#MenuItem1').click(function(){
-            $('#sub-menu1').slideToggle();
-            $('#drop').removeClass('#dropDown');
-            $('#drop').addClass(iconUpBar);
+            var $this = $(this);
+            var drop = $this.data("drop")
 
+            if(drop==0){
+                $('#sub-menu1').slideDown(500);
+                $('#drop1').html(iconUpBar);
+                $this.data("drop","1")
+            }
+            else{
+                $('#sub-menu1').slideUp(500);
+                $('#drop1').html(iconDropBar);
+                $this.data("drop","0")
+            }
         })
         $('#MenuItem2').click(function(){
-            $('#sub-menu2').slideToggle();
+            var $this = $(this);
+            var drop = $this.data("drop")
+
+            if(drop==0){
+                $('#sub-menu2').slideDown(500);
+                $('#drop').html(iconUpBar);
+                $this.data("drop","1")
+            }
+            else{
+                $('#sub-menu2').slideUp(500);
+                $('#drop').html(iconDropBar);
+                $this.data("drop","0")
+            }
         })
         $('#MenuItem3').click(function(){
-            $('#sub-menu3').slideToggle();
+            var $this = $(this);
+            var drop = $this.data("drop")
+
+            if(drop==0){
+                $('#sub-menu3').slideDown(500);
+                $('#drop3').html(iconUpBar);
+                $this.data("drop","1")
+            }
+            else{
+                $('#sub-menu3').slideUp(500);
+                $('#drop3').html(iconDropBar);
+                $this.data("drop","0")
+            }  
         })
         $('#MenuItem4').click(function(){
-            $('#sub-menu4').slideToggle();
+            var $this = $(this);
+            var drop = $this.data("drop")
+
+            if(drop==0){
+                $('#sub-menu4').slideDown(500);
+                $('#drop4').html(iconUpBar);
+                $this.data("drop","1")
+            }
+            else{
+                $('#sub-menu4').slideUp(500);
+                $('#drop4').html(iconDropBar);
+                $this.data("drop","0")
+            }        
         })
+    })
+        
+        <!--Change containerShowDetail  -->
+        
+        $('#HistoryAdmin').click(function(){
+            $('#titleContainerDetail').html("History-Admin");
+            $('.HistoryAdmin').slideDown(500);
+            $('.HistoryAdmin').css({"z-index" : "2"});     
+            $('.HistoryCustomer').css({"z-index" : "1"});
+            $('.HistoryCustomer').slideUp(500);
+
+
+            $('#HistoryCustomer').click(function(){
+            $('#titleContainerDetail').html("History-Customer");
+            $('.HistoryAdmin').slideUp(500);            
+            $('.HistoryAdmin').css({"z-index" : "1"});     
+            $('.HistoryCustomer').css({"z-index" : "2"});
+            $('.HistoryCustomer').slideDown(500);
+    })
+
+
     })
 </script>
 </html>
