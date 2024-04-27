@@ -19,12 +19,12 @@
         }
     </style>
 </head>
-<body>
+<body >
     <section>
         <figure>
             <main>
-                <div class="container h-[100vh] w-full ">
-                    <div class="grid grid-cols-10 h-full bg-white relative gap-5">
+                <div class="container h-[100vh] w-[100%]">
+                    <div class="grid grid-cols-10 w-[100%] h-full  relative gap-5">
                         <div class=" col-span-2 bg-orange-500 ">
                             <div class="containerAdmin flex flex-col w-full h-full gap-1">
                                 
@@ -37,6 +37,7 @@
                                     <img src="../Image/angkorwatt.jpeg" id="ImgProfle" class="w-[20%]  rounded-[100%]" alt="">
                                     <div class="boxName flex flex-col items-center   w-full">
                                     <h2 class="text-white  font-bold font-mono">Welcome Admin</h2>
+                                    <!-- Name User log in -->
                                     <h2 class="text-white  font-bold font-mono">Nouk Raksa</h2>
                                 </div>
                             </div>
@@ -44,16 +45,16 @@
                             <div class="boxMenu w-full h-full flex flex-col justify-start relative py-5  bg-orange-600 gap-2">
                             <div id="MenuItem1" class="MenuItem w-full   gap-1 px-2  flex flex-col justify-start relative">
                                 <nav class=" menubar w-full h-full text-white font-semibold uppercase cursor-pointer hover:scale-95 duration-500 bg-orange-500 shadow-2xl shadow-black flex flex-col items-center ">
-                                <div class=" w-full  flex justify-between items-center px-2 ">
+                                <a href="#" class=" w-full  flex justify-between items-center px-2 ">
                                     <h2>Menu</h2>
                                     <div id="iconDropBar" class="iconDropBar text-3xl text-white font-semibold relative  "><div class="drop" id="drop"><i class="dropDown fa-solid fa-caret-down" ></i></div></div>             
-                                </div>
+                                </a>
 
                                 <ul id="sub-menu1" class="sub-menu hidden w-full  flex-col    bg-slate-500 ">
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mb-1"><a href="">History Admin</a></li>
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mt-1"><a href="">History Customer</a></li>
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mb-1"><a href="">History Admin</a></li>
-                                    <li class="hover:bg-slate-500  duration-300 px-4 mt-1"><a href="">History Customer</a></li>
+                                    <li id="history-Admin" class="history-Admin hover:bg-slate-500  duration-300 px-4 mb-1"><a href="#">History Admin</a></li>
+                                    <li id="history-Customer" class="hover:bg-slate-500  duration-300 px-4 mt-1">           <a href="#">History Customer</a></li>
+                                    <li id="history-Admin" class="hover:bg-slate-500  duration-300 px-4 mb-1">              <a href="#">History Admin</a></li>
+                                    <li id="history-Admin" class="hover:bg-slate-500  duration-300 px-4 mt-1">              <a href="#">History Customer</a></li>
                                 </ul>
                                 </nav>
                             </div>
@@ -109,17 +110,34 @@
                             </div>
                         </div>
 
-                        <div class=" col-span-8 bg-white">
+                        <div class=" col-span-8  ">
                             <div class="grid grid-cols-12 grid-rows-10 w-full h-full gap-5">
 
-                                <div class=" col-span-12 row-span-2 bg-gray-300 shadow-2xl shadow-black mt-5">
+                                <div class="containerTitle col-span-12 row-span-2 bg-gray-300 shadow-2xl shadow-black mt-5">
                                     <div class="w-full h-full flex justify-center items-center">
                                         <h2 class="font-semibold font-mono text-3xl text-orange-500">Admin-DashBoard</h2>
                                     </div>
                                 </div>
-                                <div class="containerShowDetail col-span-12 row-span-8 bg-gray-300 shadow-2xl shadow-black ">Helo</div>
+
+                                <div class="containerShowDetail col-span-12 row-span-8 bg-gray-300 shadow-2xl shadow-black relative">
+                                    <div class="panelShowHistory">
+                               
+                                    <div class="historyAdmin     w-full h-full bg-blue-800 shadow-2xl shadow-black absolute top-0 left-0 ">
+                                    <div class="showHistory-Admin w-full h-full bg-yellow-400 flex justify-center items-center">
+                                        <div class="borderTest w-[20%] h-[20%] border-2 bg-black"></div>
+                                    </div>
+                                </div>
+                                <div class="historyCustomer hidden w-full h-full bg-orange-500 shadow-2xl shadow-black absolute top-0 left-0">
+                                    <div class="showHistory-Admin w-full h-full bg-red-500 flex justify-center items-center">
+                                        <div class="borderTest w-[20%] h-[20%] border-2 bg-black"></div>
+                                    </div>
+                                </div>
+                                    </div>
+                                </div>
+                            
                             </div>
                         </div>
+
                     </div>
                 </div>
             </main>
@@ -132,19 +150,28 @@
     $(document).ready(function(){
         $('#MenuItem1').click(function(){
             $('#sub-menu1').slideToggle();
-            $('#drop').removeClass('#dropDown');
-            $('#drop').addClass(iconUpBar);
+            $('#drop').html(iconUpBar);
 
         })
-        $('#MenuItem2').click(function(){
-            $('#sub-menu2').slideToggle();
-        })
-        $('#MenuItem3').click(function(){
-            $('#sub-menu3').slideToggle();
-        })
-        $('#MenuItem4').click(function(){
-            $('#sub-menu4').slideToggle();
-        })
+    })
+    $('#MenuItem2').click(function(){
+        $('#sub-menu2').slideToggle();
+    })
+    $('#MenuItem3').click(function(){
+        $('#sub-menu3').slideToggle();
+    })
+    $('#MenuItem4').click(function(){
+        $('#sub-menu4').slideToggle();
+    })
+
+    // Container Show Detail
+    $('#history-Admin').click(function(){
+        $('.historyCustomer').slideUp();
+        $('.historyAdmin').slideDown();
+    })
+    $('#history-Customer').click(function(){
+        $('.historyCustomer').slideDown();
+        $('.historyAdmin').slideUp();
     })
 </script>
 </html>
