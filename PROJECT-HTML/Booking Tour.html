@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/tailwind.css">
+</head>
+<body>
+    <section>
+        <figure>
+            <main class="w-full h-screen bg-black flex justify-center items-center">
+                <container class="w-[50%] h-[90%] bg-gray-900 flex flex-col border-2 rounded-lg overflow-hidden">
+                    <Box class="header flex justify-between">
+                    <header class="w-[35%] bg-gray-500 py-1 px-3 my-1 mx-1  text-center text-orange-500 text-xl font-bold font-mono border-2 rounded-bl-full rounded-tr-full">Contact Booking</header>
+                    <h4 class="border-2 border-red-500 hover:border-white rounded-full px-4 py-2 mx-5 my-1 font-extrabold text-xl text-red-500 hover:bg-red-500 hover:text-white duration-500 cursor-pointer ">X</h4>
+                    </Box>
+                    <div class="Form h-[78%] bg-gray-500 my-2 flex justify-center">
+
+                        <form action="" method="post" class="w-[90%] flex flex-col  gap-4   text-white font-mono font-bold ">
+                      
+                        <div class="boxName flex justify-evenly  py-2 ">
+                                <input type="text" placeholder="first-name..." class="h-10 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                                <input type="text" placeholder="last-name..." class="h-10 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                        </div>
+                        
+                        <div class="boxEmail flex justify-evenly  ">
+                            <input type="text" placeholder="@email..." class="w-[80%] h-10 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                        </div>
+                        <div class="boxNumberNCountry flex justify-evenly  py-2">
+                            <div class="phoneNumber flex text-gray-500 gap-1">
+                                <select name="" id="" class="rounded-md font-thin cursor-pointer border-2 hover:border-orange-500 outline-orange-500">
+                                    <option value="+885">+885</option>
+                                    <option value="+886">+886</option>
+                                    <option value="+887">+887</option>
+                                    <option value="+888">+888</option>
+                                </select>
+                            <input type="tel" placeholder="000-000-000" class="h-10 w-36 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                            </div>
+                            <select name="country" id="country" class="w-[210px] h-10 text-gray-500 rounded-md font-thin cursor-pointer border-2 hover:border-orange-500 outline-orange-500">
+                                <option value="select country...">select country...</option>
+                                <option value="Cambodia ">Cambodia </option>
+                                <option value="Thailand ">Thailand </option>
+                                <option value="China    ">China    </option>
+                                <option value="Japan    ">Japan    </option>
+                                <option value="Korea    ">Korea    </option>
+                                <option value="Indea    ">Indea    </option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="England  ">England  </option>
+                                <option value="France   ">France   </option>
+                            </select>
+                        </div>
+                        <div class="boxTravel flex justify-evenly    py-2">
+                            <input type="date" placeholder="first-name..." class="w-52 h-10 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                            <input type="date" placeholder="first-name..." class="w-52 h-10 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                        </div>
+
+                        <div class="boxName flex justify-evenly  py-2 ">
+                            <select name="" id="" class="w-44 h-10 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500 cursor-pointer">
+                                <option value="1 Person">1 Person</option>
+                                <option value="2 Person">2 Person</option>
+                                <option value="3 Person">3 Person</option>
+                                <option value="4 Person">4 Person</option>
+                                <option value="5 Person">5 Person</option>
+                                <option value="6 Person">6 Person</option>
+                                <option value="7 Person">7 Person</option>
+                                <option value="8 Person">8 Person</option>
+                                <option value="9 Person">9 Person</option>
+                                <option value="10 Person">10 Person</option>
+                                <option value="11 Person">11 Person</option>
+                                <option value="12 Person">12 Person</option>
+                                <option value="13 Person">13 Person</option>
+                            </select>
+
+                        <div class="traveler flex ">
+                            <input type="number" placeholder="Child" class="w-20 h-10 font-thin rounded-l-md border-r-2 border-r-gray-500 outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                            <input type="number" placeholder="Adults"class="w-20 h-10 font-thin  outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                            <input type="number" placeholder="Older" class="w-20 h-10 font-thin rounded-r-md border-r-2 border-l-gray-500 outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                        </div>
+                        </div>
+                        <div class="boxEmail flex justify-evenly  ">
+                            <input type="text" placeholder="Enter enquiry here..." class="w-[80%] h-24 font-thin rounded-md outline-orange-500 text-gray-500 px-2 border-2 hover:border-orange-500">
+                        </div>
+
+
+
+
+                        </form>
+                    </div>
+                    <div class="BTN  flex justify-center gap-52 my-2">
+                        <button class="py-1 px-3 bg-red-500   text-white font-semibold rounded-md border-2 border-red-800 hover:scale-105 duration-500 focus:ring ring-red-800">Cancel</button>
+                        <button class="py-1 px-3 bg-green-500 text-white font-semibold rounded-md border-2 border-green-800 hover:scale-105 duration-500 focus:ring ring-green-800">Submit</button>
+                    </div>
+                </container>
+            </main>
+        </figure>
+    </section>
+</body>
+</html>

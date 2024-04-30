@@ -68,6 +68,20 @@ width: 100%;
 .listCategory ul li a:hover:before{
 width: 100%;
 }
+.containerOption h2::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: rgb(255, 128, 0);
+    left: 0;
+    bottom: 0;
+    transition: 0.2s ease-in;
+}
+.containerOption h2:hover::before{
+    width: 100%;
+}
 
 
 
@@ -75,10 +89,17 @@ width: 100%;
 .changeContent:after{
     content: "";
     animation: changetext 10s infinite 1s ease-in-out;
-    
+}
+.Content-SR:after{
+    content: "";
+    animation: textAnimationSR 10s infinite 1s ease-in-out;
 }
 .btn-slider .btn-slide.active{
     background-color: aliceblue;
+}
+.cardDetail h6{
+    font-size: 10px;
+    
 }
 .cardContentHomepage{
     bottom: 40px;
@@ -110,6 +131,14 @@ width: 100%;
     60%{content:"Camping";}
     80%{content:"Mountain";}
     100%{content:"Waterfall";}
+}
+@keyframes textAnimationSR{  
+    0%{content:"Angkor Wat Temple";}
+    20%{content:"Angkor Thom Temple";}
+    40%{content:"Bayon Temple";}
+    60%{content:"Ba Khaeng Temple";}
+    80%{content:"Phnom Krom Temple";}
+    100%{content:"Phnom Bok Temple";}
 }
 @keyframes slideContent{
     from{
